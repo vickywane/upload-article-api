@@ -44,8 +44,9 @@ const app = express();
 const route = "graphql";
 
 server.applyMiddleware({ app, route });
+const PORT  = process.env.PORT || 3000
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Go to http://localhost:3000/graphql to run queries!");
+app.listen(PORT, () => {
+  console.log(`Run queries at http://localhost:${PORT}/graphql!`);
 });
